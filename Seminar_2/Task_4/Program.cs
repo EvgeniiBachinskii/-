@@ -8,19 +8,11 @@
 Console.Clear();
 Console.WriteLine("enter n");
 int N = int.Parse(Console.ReadLine()!);
-if (N % 7==0)
-{
-    if (N % 23 == 0)
+if (N % 7==0 && N % 23 == 0 ) // знак && это "и"
     {
-        Console.WriteLine("da");
+    Console.WriteLine("da");
     }
-    else
-    {
-        Console.WriteLine("no");
-    }
-}
 else
-{
+    {
         Console.WriteLine("no");
-}
-
+    }

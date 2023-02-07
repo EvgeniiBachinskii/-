@@ -13,19 +13,13 @@ int N = int.Parse(Console.ReadLine()!);
 Console.WriteLine("enter n2");
 int N2 = int.Parse(Console.ReadLine()!);
 
-if (N == N2 * N2)
+if (N == N2 * N2 || N2 == N * N ) // знак || это "или"
 {
     Console.WriteLine("da");
 }
-else
-{
-    if (N2 == N * N)
-    {
-        Console.WriteLine("da");
-    }
     else
     {
         Console.WriteLine("no");
     }
-}
+
 

@@ -1,11 +1,12 @@
 ﻿//  Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
-
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
 
 Console.Clear();
 
 Console.WriteLine("Введите трехзначное число: ");
-int N = int.Parse(Console.ReadLine()!);
-N = N / 10;
+int N = (int.Parse(Console.ReadLine()!)) / 10;
 Console.WriteLine($"Вторая цифра вашего числа: {N % 10}");
 
-
+// READY

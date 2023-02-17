@@ -28,5 +28,3 @@ int CountEven(int[] inarray)
 
 int[] arrayTest = GetArray(5,100,999);
 Console.WriteLine($"{String.Join(",", arrayTest)} -> {CountEven(arrayTest)}");
-
-// Console.Write(CountEven(arrayTest));

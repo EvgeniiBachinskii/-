@@ -7,9 +7,8 @@ double[] array = new double[5];
 Random rand = new Random();
 for (int i = 0; i < array.Length; i++)
 {
-    array[i] = 5 - rand.Next(11) + rand.NextDouble();
+    array[i] = Math.Round(5 - rand.Next(11) + rand.NextDouble(), 3);
 }
-
 
 double subtraction(double[] InArray)
 {
@@ -26,9 +25,6 @@ double subtraction(double[] InArray)
     double sub = max - min;
     return sub;
 }
-
-
-
 
 Console.WriteLine($"{String.Join("|", array)} -> {subtraction(array)}");
 

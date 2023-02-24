@@ -20,11 +20,11 @@ int CountEven(int[] inarray)
     int count = 0;
     for (int i = 0; i < inarray.Length; i++)
     {
-        if(inarray[i]%2==0)count++;
+        if (inarray[i] % 2 == 0) count++;
     }
     return count;
 }
 
 
-int[] arrayTest = GetArray(5,100,999);
+int[] arrayTest = GetArray(5, 100, 999);
 Console.WriteLine($"{String.Join(",", arrayTest)} -> {CountEven(arrayTest)}");

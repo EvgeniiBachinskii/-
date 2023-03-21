@@ -42,7 +42,6 @@ void Sort2DArray(int[,] array)
                     array[i, k] = temp;
                 }
             }
-
         }
     }
 }

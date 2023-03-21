@@ -1,23 +1,46 @@
 ﻿// Задача 58: Задайте две матрицы. Напишите программу, которая будет
 // находить произведение двух матриц.
 
+// int[,] MultiplicationMatrix(int[,] arrayA, int[,] arrayB)
+// {
+//     int[,] arrayC = new int[arrayA.GetLength(0), arrayB.GetLength(1)];
+//     if (arrayA.GetLength(1) == arrayB.GetLength(0))
+//     {
+//         for (int iC = 0; iC < arrayC.GetLength(0); iC++)
+//         {
+//             for (int jC = 0; jC < arrayC.GetLength(1); jC++)
+//             {
+//                 int iA = iC;
+//                 int jB = jC;
+//                 int Sum = 0;
+//                 for (int k = 0; k < arrayA.GetLength(1); k++)
+//                 {
+//                     Sum = Sum + arrayA[iA, k] * arrayB[k, jB];
+//                 }
+//                 arrayC[iC, jC] = Sum;
+//             }
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine("Произведение данных матриц не существует");
+//     }
+//     return arrayC;
+// }
+
 int[,] MultiplicationMatrix(int[,] arrayA, int[,] arrayB)
 {
     int[,] arrayC = new int[arrayA.GetLength(0), arrayB.GetLength(1)];
     if (arrayA.GetLength(1) == arrayB.GetLength(0))
     {
-        for (int iC = 0; iC < arrayC.GetLength(0); iC++)
+        for (int i = 0; i < arrayC.GetLength(0); i++)
         {
-            for (int jC = 0; jC < arrayC.GetLength(1); jC++)
+            for (int j = 0; j < arrayC.GetLength(1); j++)
             {
-                int iA = iC;
-                int jB = jC;
-                int Sum = 0;
                 for (int k = 0; k < arrayA.GetLength(1); k++)
                 {
-                    Sum = Sum + arrayA[iA, k] * arrayB[k, jB];
+                    arrayC[i, j] = arrayC[i, j] + arrayA[i, k] * arrayB[k, j];
                 }
-                arrayC[iC, jC] = Sum;
             }
         }
     }
@@ -56,8 +79,8 @@ void Print2DArray(int[,] inArray)
 
 
 
-int[,] array1 = Get2DArray(2, 4, 1, 4);
-int[,] array2 = Get2DArray(5, 6, 1, 4);
+int[,] array1 = Get2DArray(2, 3, 1, 4);
+int[,] array2 = Get2DArray(3, 2, 1, 4);
 Console.Clear();
 Print2DArray(array1);
 Console.WriteLine();
